@@ -1,26 +1,22 @@
-pipeline{
-
+pipeline {
     agent any
-
     environment {
-       DEM0= '1.3'
+        RELEASE='20.04'
     }
-    stages{
-        stage('stage1') {
-            steps{
-                echo " THIS iS BUILD N  $BUILD_NUMBER of demo ${DEMO} "
-                sh """
-                    echo "Using a mltiline shell step"
-                    chmod +x test.sh 
-                     
-                    
-                """
-
+    stages {
+        stage('Build') {
+            agent any
+            environment {
+                LOG_LEVEL='INFO'
             }
-            
+            steps {
+                echo "Building release ${RELEASE} with log level ${LOG_LEVEL}..."
+            }
+        }
+        stage('Test') {
+            steps {
+                echo "Testing. I can see release ${RELEASE}, but not log level ${LOG_LEVEL}"
+            }
         }
     }
-    
 }
-
-
