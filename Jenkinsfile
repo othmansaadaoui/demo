@@ -12,7 +12,7 @@ environment {
                     echo "Using a mltiline shell step"
                     chmod +x test.sh 
                     ./test.sh
-                    '''
+                '''
 
             }
             
