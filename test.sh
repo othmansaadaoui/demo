@@ -1,0 +1,1 @@
+echo "Iside the script, demo $DEMO"
