@@ -2,7 +2,7 @@ pipeline{
     agent any
 
 environment {
-    DEM0='1.3'
+    DEM0= '1.3'
 }
     stages{
         stage('stage1') {
