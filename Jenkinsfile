@@ -7,7 +7,7 @@ environment {
     stages{
         stage('stage1') {
             steps{
-                echo "THIS iS BUILD N  $BUILD_NUMBER of demo $DEMO"
+                echo "THIS iS BUILD N  $BUILD_NUMBER of demo "
                 sh '''
                     echo "Using a mltiline shell step"
                     chmod +x test.sh 
